@@ -15,7 +15,7 @@ module Fastlane
 
       def self.upload_build(api_token, user_name, binary, options)
         require 'faraday'
-        require 'faraday_middleware'
+        require 'fastlane_core/faraday_compat'
 
         connection = Faraday.new(url: DEPLOYGATE_URL_BASE, request: { timeout: 120 }) do |builder|
           builder.request(:multipart)

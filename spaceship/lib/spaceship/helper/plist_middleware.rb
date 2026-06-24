@@ -1,4 +1,4 @@
-require 'faraday_middleware/response_middleware'
+require 'fastlane_core/faraday_compat'
 
 module FaradayMiddleware
   class PlistMiddleware < ResponseMiddleware

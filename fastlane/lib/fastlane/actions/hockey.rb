@@ -9,7 +9,7 @@ module Fastlane
     class HockeyAction < Action
       def self.connection(options)
         require 'faraday'
-        require 'faraday_middleware'
+        require 'fastlane_core/faraday_compat'
 
         base_url = options.delete(:bypass_cdn) ? "https://rink.hockeyapp.net" : "https://upload.hockeyapp.net"
         foptions = {

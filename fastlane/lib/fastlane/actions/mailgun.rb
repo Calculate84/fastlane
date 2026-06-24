@@ -10,7 +10,7 @@ module Fastlane
       def self.run(options)
         Actions.verify_gem!('faraday')
         Actions.verify_gem!('mime-types')
-        require 'faraday'
+        require 'fastlane_core/faraday_compat'
         begin
           # Use mime/types/columnar if available, for reduced memory usage
           require 'mime/types/columnar'

@@ -23,7 +23,7 @@ module Fastlane
 
       def self.upload_build(params)
         require 'faraday'
-        require 'faraday_middleware'
+        require 'fastlane_core/faraday_compat'
 
         url = INSTALLR_API
         connection = Faraday.new(url) do |builder|

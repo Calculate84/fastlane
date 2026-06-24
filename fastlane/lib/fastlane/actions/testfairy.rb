@@ -9,7 +9,7 @@ module Fastlane
     class TestfairyAction < Action
       def self.upload_build(upload_url, ipa, options, timeout)
         require 'faraday'
-        require 'faraday_middleware'
+        require 'fastlane_core/faraday_compat'
 
         UI.success("Uploading to #{upload_url}...")
 

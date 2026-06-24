@@ -1,5 +1,5 @@
 require 'addressable'
-require 'faraday_middleware'
+require 'fastlane_core/faraday_compat'
 
 require_relative '../rule'
 
